@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@drawable/background"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+        android:text="@string/app_error"
+        android:gravity="center_vertical|center_horizontal"/>
+
+    <ImageView
+        android:src="@drawable/app_error"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.50"
+        android:contentDescription="@string/app_error"/>
+
+    <Button
+        android:id="@+id/installApp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.25"
+        android:onClick="installApp"
+        android:text="Install Now!!!"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
