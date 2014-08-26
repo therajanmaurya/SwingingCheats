@@ -8,6 +8,7 @@
     <string name="app_error">Sorry, the game is not installed on your phone.:(</string>
     <string name="root_unavailable">We told you. This app is for only rooted devices. If
         you believe your device is rooted then please recheck permissions.</string>
+    <string name="loadFromFile">Load From File</string>
     <string name="title_activity_help_and_about">HelpAndAbout</string>
     <string name="helpabout">Developed By:\n\n\nCODELHIITES</string>
 

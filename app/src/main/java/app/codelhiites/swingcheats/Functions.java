@@ -8,24 +8,20 @@ import android.net.Uri;
 import android.widget.EditText;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- * Created by deveshkhandelwal on 8/23/14.
+ * Created on 8/23/14.
  *
  * Class for helper methods.
  */
 
 public class Functions
 {
-
-	private static String currentScore;
 
 	// Useless constructor.
 	public Functions()
@@ -36,7 +32,7 @@ public class Functions
 	// Method for checking whether or not the application is installed.
 	public static boolean isAppInstalled(Context context)
 	{
-		boolean installed = false;
+		boolean installed;
 		PackageManager app = context.getPackageManager();
 		try
 		{
@@ -91,8 +87,7 @@ public class Functions
 			e.printStackTrace();
 		}
 
-		currentScore =  parseScoreFromXML("/data/local/tmp/.swingtmp/SwingCopters.xml");
-		return currentScore;
+		return parseScoreFromXML("/data/local/tmp/.swingtmp/SwingCopters.xml");
 	}
 
 	// Parsing SwingCopters.xml file for scores.
@@ -221,7 +216,7 @@ public class Functions
 	public static boolean isRooted()
 	{
 		boolean found = false;
-		if (!found)
+		try
 		{
 			String[] places = { "/sbin/", "/system/bin/", "/system/xbin/",
 					"/data/local/xbin/", "/data/local/bin/",
@@ -233,6 +228,7 @@ public class Functions
 					try
 					{
 						Process p = Runtime.getRuntime().exec("su exit \n");
+						p.destroy();
 					}
 					catch (Exception e)
 					{
@@ -242,6 +238,10 @@ public class Functions
 					break;
 				}
 			}
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
 		}
 		return found;
 	}

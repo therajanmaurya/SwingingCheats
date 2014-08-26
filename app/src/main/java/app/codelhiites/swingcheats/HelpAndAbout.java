@@ -1,13 +1,11 @@
 package app.codelhiites.swingcheats;
 
+import android.app.Activity;
 import android.os.Build;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import app.codelhiites.swingcheats.R;
 
-public class HelpAndAbout extends ActionBarActivity {
+public class HelpAndAbout extends Activity
+{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,7 +13,14 @@ public class HelpAndAbout extends ActionBarActivity {
         setContentView(R.layout.help_and_about);
 		if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.HONEYCOMB)
 		{
-			getActionBar().setDisplayHomeAsUpEnabled(true);
+			try
+			{
+				getActionBar().setDisplayHomeAsUpEnabled(true);
+			}
+			catch (NullPointerException e)
+			{
+				e.printStackTrace();
+			}
 		}
     }
 

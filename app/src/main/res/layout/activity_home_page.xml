@@ -14,6 +14,7 @@
         android:src="@drawable/load"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/loadFromFile"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:onClick="load" />
@@ -21,7 +22,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Load from file"
+        android:text="@string/loadFromFile"
         android:layout_below="@id/loadScore"/>
 
 </RelativeLayout>

@@ -9,7 +9,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class HomePage extends Activity
@@ -59,7 +58,7 @@ public class HomePage extends Activity
         int id = item.getItemId();
         if (id == R.id.info)
 		{
-			// startActivity(new Intent(this, HelpAndAbout.class));
+			startActivity(new Intent(this, HelpAndAbout.class));
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -74,8 +73,8 @@ public class HomePage extends Activity
 			setContentView(R.layout.score);
 			String cScore = Functions.CurrentScore();
 			Toast.makeText(this, cScore, Toast.LENGTH_SHORT).show();
-			TextView currentScore = (TextView)findViewById(R.id.currentScore);
-			currentScore.setText(cScore);
+//			TextView currentScore = (TextView)findViewById(R.id.currentScore);
+//			currentScore.setText(cScore);
 		}
 		else
 		{
