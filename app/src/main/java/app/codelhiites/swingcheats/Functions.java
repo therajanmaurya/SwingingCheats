@@ -83,16 +83,11 @@ public class Functions
 			// Running commands for copying file into temp directory.
 			Process su = Runtime.getRuntime().exec("su");
 			DataOutputStream os = new DataOutputStream(su.getOutputStream());
-//			os.writeBytes("mount -o rw,remount /data \n");
 			os.writeBytes("mkdir /data/local/tmp/.swingtmp \n");
 			os.writeBytes("busybox cp /data/data/com.dotgears" +
 					".swing/shared_prefs/SwingCopters" +
 					".xml /data/local/tmp/.swingtmp/ \n");
-//			os.writeBytes("chmod 777 /data/local/tmp/.swingtmp/SwingCopters.xml \n");
-//			os.writeBytes("busybox touch /data/local/tmp/.swingtmp/newXML.xml \n");
-//			os.writeBytes("chmod 777 /data/local/tmp/.swingtmp/newXML.xml \n");
 			os.writeBytes("busybox chmod 777 /data/local/tmp/.swingtmp/SwingCopters.xml \n");
-//			os.writeBytes("chmod 777 -R /sdcard/.swingtmp \n");
 			os.writeBytes("exit\n");
 			os.flush();
 		}
@@ -145,20 +140,6 @@ public class Functions
 			// Running commands for moving temp file back to data and deleting temp directory.
 			Process su = Runtime.getRuntime().exec("su");
 			DataOutputStream os = new DataOutputStream(su.getOutputStream());
-//			os.writeBytes("mount -o rw,remount /data \n");
-//			os.writeBytes("busybox rm -f /data/local/tmp/.swingtmp/SwingCopters.xml \n");
-//			os.writeBytes("busybox mv /data/local/tmp/.swingtmp/newXML.xml /data/local/tmp/" +
-////					".swingtmp/SwingCopters.xml \n");
-//			os.writeBytes("busybox chmod 777 /data/data/com.dotgears" +
-//					".swing/shared_prefs/SwingCopters.xml \n");
-////			os.writeBytes("busybox cp -f /data/local/tmp/.swingtmp/SwingCopters.xml " +
-////					"/data/data/com.dotgears" +
-////					".swing/shared_prefs/SwingCopters.xml \n");
-//			updateScoreXML("/data/data/com.dotgears.swing/shared_prefs/SwingCopters.xml",
-//					newScore.getText().toString());
-//			os.writeBytes("busybox chmod 660 /data/data/com.dotgears" +
-//					".swing/shared_prefs/SwingCopters.xml \n");
-//			os.writeBytes("rm -rf /data/local/tmp/.swingtmp \n");
 			os.writeBytes("touch /data/data/com.dotgears.swing/shared_prefs/SwingCopters.xml \n");
 			os.writeBytes("STR=\"<?xml version=\'1.0\' encoding=\'utf-8\' standalone=\'yes\' ?>\"" +
 					" \n");
@@ -183,7 +164,7 @@ public class Functions
 		}
 	}
 
-	// Parsing SwingCopters.xml for updating scores.
+	// ***NO USE RIGHT NOW*** - Parsing SwingCopters.xml for updating scores.
 
 /*	protected static void updateScoreXML(String file, String score)
 	{

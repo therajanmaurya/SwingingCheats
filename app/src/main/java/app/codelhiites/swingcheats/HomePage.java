@@ -7,9 +7,9 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -103,7 +103,9 @@ public class HomePage extends Activity
         return super.onOptionsItemSelected(item);
     }
 
-	// Function called on load button click on activity_home_page.
+	// ***NOT IN USE*** - Function called on load button click on activity_home_page.
+
+/*
 	public void load(View view)
 	{
 		if (Functions.isAppInstalled(this))
@@ -112,8 +114,6 @@ public class HomePage extends Activity
 			setContentView(R.layout.score);
 			String cScore = Functions.CurrentScore();
 			Toast.makeText(this, cScore, Toast.LENGTH_SHORT).show();
-//			TextView currentScore = (TextView)findViewById(R.id.currentScore);
-//			currentScore.setText(cScore);
 		}
 		else
 		{
@@ -121,6 +121,7 @@ public class HomePage extends Activity
 			setContentView(R.layout.app_not_installed);
 		}
 	}
+*/
 
 	// Function called for installing game.
 	public void installApp(View view)
@@ -134,8 +135,8 @@ public class HomePage extends Activity
 	{
 		EditText newScore = (EditText)findViewById(R.id.newScore);
 		Functions.applyNewScore(newScore);
-//		load(view);
-		finish();
+		((Button) view).setText("Success!!!");
+		view.setEnabled(false);
 	}
 }
 // CLASS ENDS HERE.
