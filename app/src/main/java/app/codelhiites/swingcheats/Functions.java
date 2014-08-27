@@ -32,7 +32,7 @@ public class Functions
 	// Method for checking whether or not the application is installed.
 	public static boolean isAppInstalled(Context context)
 	{
-		boolean installed;
+		boolean installed = false;
 		PackageManager app = context.getPackageManager();
 		try
 		{
@@ -52,14 +52,28 @@ public class Functions
 		try
 		{
 			context.startActivity(new Intent(Intent.ACTION_VIEW,
-					Uri.parse("market://details?id=" + "@string/appname")));
+					Uri.parse("market://details?id=com.dotgears.swing")));
 		}
 		catch (ActivityNotFoundException e)
 		{
 			context.startActivity(new Intent(Intent.ACTION_VIEW,
-					Uri.parse("market://details?id=" + "@string/appname")));
+					Uri.parse("https://play.google.com/store/apps/details?id=com.dotgears.swing")));
 		}
 	}
+
+    //Source code on github
+    public static void source_code(Context context){
+        try
+        {
+            context.startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("market://details?id=" + "@string/appname")));
+        }
+        catch (ActivityNotFoundException e)
+        {
+            context.startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("market://details?id=" + "@string/appname")));
+        }
+    }
 
 	// Method for returning current score from XML. !!!ROOT WORK DONE HERE!!!
 	public static String CurrentScore()

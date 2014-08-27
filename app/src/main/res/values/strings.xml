@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Swinging Cheats</string>
-    <string name="appname">com.dotgears.flappybird</string>
+    <string name="appname">com.dotgears.swing</string>
     <string name="info">HelpAndAbout</string>
     <string name="update">Apply New Score</string>
     <string name="app_error">Sorry, the game is not installed on your phone.:(</string>
@@ -10,6 +10,6 @@
         you believe your device is rooted then please recheck permissions.</string>
     <string name="loadFromFile">Load From File</string>
     <string name="title_activity_help_and_about">HelpAndAbout</string>
-    <string name="helpabout">Developed By:\n\n\nCODELHIITES</string>
+    <string name="helpabout">Developed By:\nCODELHIITES</string>
 
 </resources>

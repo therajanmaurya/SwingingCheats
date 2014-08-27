@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="Requirements"
         android:id="@+id/requirement"
-        android:textSize="30sp"
+        android:textSize="40sp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:text="You should have a Rooted android device"
         android:id="@+id/textView6"
-        android:textSize="30sp"
+        android:textSize="35sp"
         android:layout_below="@+id/requirement"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -32,7 +32,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="BE SURE, YOU SHOULD HAVE ATLEAST SOCRED 1 IN GAME. If your score is zero in game it won't work"
-        android:textSize="25sp"
+        android:textSize="35sp"
         android:layout_below="@+id/textView6"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -45,7 +45,7 @@
         android:text="This Project is Open Source, Download Source code from github and fork it.\n https://github.com/teamDAPSR/SwingingCheats"
         android:id="@+id/textView"
         android:layout_marginTop="27dp"
-        android:textSize="20sp"
+        android:textSize="35sp"
         android:layout_below="@+id/textView7"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -56,8 +56,8 @@
         android:text="source code on github"
         android:id="@+id/github"
         android:textSize="25sp"
-        android:layout_below="@+id/textView"
         android:onClick="github"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
     <!--

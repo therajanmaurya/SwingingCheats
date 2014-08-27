@@ -63,7 +63,7 @@
         android:layout_gravity="center_horizontal"
         android:onClick="applyNewScore"
         android:layout_marginTop="37dp"
-        android:textSize="30sp"
+        android:textSize="35sp"
         android:layout_below="@+id/newScore"
         android:layout_centerHorizontal="true" />
 
@@ -91,5 +91,6 @@
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:background="#ffffff"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="35sp" />
 </RelativeLayout>

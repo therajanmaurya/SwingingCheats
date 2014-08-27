@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomePage" >
+
+    <item
+        android:id="@+id/info"
+        android:title="@string/info"
+        android:icon="@drawable/ic_action_about"
+        android:orderInCategory="98"
+        android:showAsAction="always" />
+
+    <item
+        android:id="@+id/share"
+        android:title="Share"
+        android:icon="@drawable/ic_action_share"
+        android:showAsAction="never"
+        android:orderInCategory="99" />
+
+    <item
+        android:id="@+id/rate"
+        android:title="Rate"
+        android:icon="@drawable/ic_action_good"
+        android:showAsAction="never"
+        android:orderInCategory="100" />
+
+    <item
+        android:id="@+id/more"
+        android:title="More"
+        android:icon="@drawable/ic_action_good"
+        android:showAsAction="never"
+        android:orderInCategory="100" />
+
+</menu>

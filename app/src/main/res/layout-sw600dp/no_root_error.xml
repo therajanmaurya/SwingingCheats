@@ -22,5 +22,5 @@
         android:layout_gravity="center"
         android:gravity="center_horizontal"
         android:id="@+id/wetold"
-        android:textSize="30sp" />
+        android:textSize="50sp" />
 </LinearLayout>
